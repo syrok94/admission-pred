@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type="text/css">
+        body{
+            background-color:orange
+        }
+
+    </style>
+</head>
+<body>
+<div align="center">
+    <h3>
+        CHECK YOUR PERCENTAGE OF ADMISSION HERE:
+    </h3>
+</div>
+<br>
+<br>
+
+<center>
+    <form method="post" action="{{url_for('predict')}}" enctype="multipart/form-data">
+    <div  class="form">
+        <input type="text" name="GRE_Score" placeholder="GRE Score">
+    <br>
+    <br>
+    <input type="text" name="TOEFL_Score" placeholder="TOEFL Score">
+    <br>
+    <br>
+    <input type="text" name="University_rating" placeholder="University Rating">
+    <br>
+    <br>
+    <input type="text" name="SOP" placeholder="SOP">
+    <br>
+    <br>
+    <input type="text" name="LOR" placeholder="LOR">
+    <br>
+    <br>
+    <input type="text" name="CGPA" placeholder="CGPA">
+    <br>
+    <br>
+    Research:<select name="Research">
+        <option value="yes">YES</option>
+        <option value="no">NO</option>
+    </select>
+    <br>
+    <br>
+
+        <input type="submit" value="predict" name="predict">
+
+
+    </div>
+    </form>
+
+</center>
+
+
+</body>
+</html>
